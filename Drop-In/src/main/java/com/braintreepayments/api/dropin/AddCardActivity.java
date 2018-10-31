@@ -67,7 +67,7 @@ public class AddCardActivity extends BaseActivity implements ConfigurationListen
     private static final int DETAILS_ENTRY = 3;
     private static final int ENROLLMENT_ENTRY = 4;
 
-    private ActionBar mActionBar;
+//    private ActionBar mActionBar;
     private ViewSwitcher mViewSwitcher;
     private AddCardView mAddCardView;
     private EditCardView mEditCardView;
@@ -92,9 +92,9 @@ public class AddCardActivity extends BaseActivity implements ConfigurationListen
         mEnrollmentCardView = findViewById(R.id.bt_enrollment_card_view);
         mEnrollmentCardView.setup(this);
 
-        setSupportActionBar((Toolbar) findViewById(R.id.bt_toolbar));
-        mActionBar = getSupportActionBar();
-        mActionBar.setDisplayHomeAsUpEnabled(true);
+//        setSupportActionBar((Toolbar) findViewById(R.id.bt_toolbar));
+//        mActionBar = getSupportActionBar();
+//        mActionBar.setDisplayHomeAsUpEnabled(true);
         mAddCardView.setAddPaymentUpdatedListener(this);
         mEditCardView.setAddPaymentUpdatedListener(this);
         mEnrollmentCardView.setAddPaymentUpdatedListener(this);
@@ -176,21 +176,21 @@ public class AddCardActivity extends BaseActivity implements ConfigurationListen
     private void enterState(int state) {
         switch(state) {
             case LOADING:
-                mActionBar.setTitle(R.string.bt_card_details);
+//                mActionBar.setTitle(R.string.bt_card_details);
                 mViewSwitcher.setDisplayedChild(0);
                 break;
             case CARD_ENTRY:
-                mActionBar.setTitle(R.string.bt_card_details);
+//                mActionBar.setTitle(R.string.bt_card_details);
                 mAddCardView.setVisibility(VISIBLE);
                 break;
             case DETAILS_ENTRY:
-                mActionBar.setTitle(R.string.bt_card_details);
+//                mActionBar.setTitle(R.string.bt_card_details);
                 mEditCardView.setCardNumber(mAddCardView.getCardForm().getCardNumber());
                 mEditCardView.useUnionPay(this, mUnionPayCard, mUnionPayDebitCard);
                 mEditCardView.setVisibility(VISIBLE);
                 break;
             case ENROLLMENT_ENTRY:
-                mActionBar.setTitle(R.string.bt_confirm_enrollment);
+//                mActionBar.setTitle(R.string.bt_confirm_enrollment);
                 mEnrollmentCardView.setPhoneNumber(
                         PhoneNumberUtils.formatNumber(mEditCardView.getCardForm().getCountryCode() +
                                 mEditCardView.getCardForm().getMobileNumber()));

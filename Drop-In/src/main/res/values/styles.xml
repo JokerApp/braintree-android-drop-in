@@ -35,6 +35,10 @@
         <item name="colorAccent">@color/bt_blue</item>
         <item name="titleTextColor">@color/bt_white</item>
         <item name="colorError">@color/bt_error_red</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
     <style name="bt_vault_manager_activity_theme" parent="Theme.AppCompat.NoActionBar">
