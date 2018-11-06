@@ -20,7 +20,7 @@ Add the dependency in your `build.gradle`:
 
 ```groovy
 dependencies {
-  implementation 'com.braintreepayments.api:drop-in:3.7.0'
+  implementation 'com.braintreepayments.api:drop-in:3.7.1'
 }
 ```
 
@@ -28,7 +28,7 @@ To use the latest build from the `master` branch use:
 
 ```groovy
 dependencies {
-  implementation 'com.braintreepayments.api:drop-in:3.7.1-SNAPSHOT'
+  implementation 'com.braintreepayments.api:drop-in:3.7.2-SNAPSHOT'
 }
 ```
 
